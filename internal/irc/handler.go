@@ -657,7 +657,7 @@ func (h *Handler) onNick(msg ircmsg.Message) {
 		return
 	}
 
-	h.setAuthenticated() // TODO: why? NICK does not necessarily mean auth is complete...
+	h.authenticate()
 }
 
 func (h *Handler) publishSSEMsg(msg domain.IrcMessage) {
